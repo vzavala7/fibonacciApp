@@ -61,7 +61,12 @@ function Fibonacci(props) {
     };
     generateSerie();
     const series = arr.map(el => {
-                        return <span className={classes.spanClass}>{el}</span>
+                        return <span
+                                    className={classes.spanClass}
+                                    key={Math.random()*100}
+                                >
+                                    {el}
+                                </span>
                     });
     const onChangeHandler = (event) => {
         setNumber(event.target.value);
